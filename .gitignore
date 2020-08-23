@@ -1,0 +1,6 @@
+fonts/*
+*.swp
+*~
+*.aux
+*.log
+*.out
