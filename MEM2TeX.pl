@@ -3,7 +3,7 @@
 # MEM files are created by the typesetting program RUNOFF
 # RNO files are used as input for the RUNOFF formatter
 # by Roman Bartke <ed.fRoBoz@zoBoRf.de>
-# Date: 2020-08-23
+# Date: 2022-09-19
 use strict;
 use POSIX qw/strftime/;
 use Getopt::Long;
@@ -137,6 +137,9 @@ while ($next_line = <$fh>) {
 			my $max_length = MaxLength(@lines);
 			foreach my $l (@lines) {
 				$l = pad($l, $max_length);
+			}
+			if (underline_only($lines[1])) {
+				@lines = reverse @lines;
 			}
 			my $text = "";
 			my $attrib = "";

@@ -4,3 +4,4 @@ fonts/*
 *.aux
 *.log
 *.out
+*.bak
